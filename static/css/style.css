@@ -1,0 +1,58 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+.shadow {
+    background-color: #fff;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    width: 300px;
+    border-radius: 10px;
+}
+.shadow h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.shadow form {
+    display: flex;
+    flex-direction: column;
+}
+.shadow label {
+    margin-bottom: 10px;
+}
+.shadow input[type="text"],
+.shadow input[type="password"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.shadow input[type="submit"] {
+    padding: 10px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+}
+.shadow input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+.shadow a {
+    text-align: center;
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #007bff;
+}
+.shadow a:hover {
+    color: #0056b3;
+}

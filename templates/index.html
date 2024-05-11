@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    <style>
+        ::placeholder{
+            text-align: center;
+        }
+        .shadow{
+            box-shadow: 3px 3px 10px black;
+            padding: 30px;
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <center>
+        <div class="shadow">
+        <form action="/login" method="post" autocomplete="off">
+            <h3>Login Page</h3>
+            {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category,message in messages %}
+                <div class="alert">{{message}}</div>
+            {% endfor %}
+        {% endif %}
+        {% endwith %}
+            <div>
+                <label>USER NAME :</label>
+                <input type="text" name="user_name" placeholder="Enter Your Name  " required>
+            </div>
+            <div>
+                <label>PASSWORD :</label>
+                <input type="password" name="user_password" required placeholder="Enter Your Password ">
+            </div>
+            <div>
+                <input type="submit" value="login"><br>
+                <a href="{{url_for('Register')}}">Register</a>
+            </div>
+    
+        </form>
+        </div>
+        </center>
+    </div>
+   
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    <style>
+        ::placeholder{
+            text-align: center;
+        }
+        .shadow{
+            box-shadow: 3px 3px 10px black;
+            padding: 30px;
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <center>
+        <div class="shadow">
+            <form action="/Register" method="post">
+                <h2>Registration</h2>
+                <div>
+                    <label>NAME : </label>
+                    <input type="text" name="name" placeholder="Enter Name" required>
+                </div>
+                <div>
+                    <label for="">CONTACT :</label>
+                    <input type="text" name ='contact' placeholder="Enter Contact" required>
+                </div>
+                <div>
+                    <label>EMAIL :</label>
+                    <input type="text" name="mail" placeholder="Enter Email" required>
+                </div>
+                <div>
+                    <label>CREATE PASSWORD :</label>
+                    <input type="password" name="create_password" placeholder="Enter Password">
+                </div>
+                <div>
+                    <input type="submit" value="Register"> <br>
+                    <a href="{{url_for('index')}}">Back To Home Page</a>
+                </div>
+
+            </form>
+
+        </div>
+        </center>
+    </div>
+</body>
+</html>
+
